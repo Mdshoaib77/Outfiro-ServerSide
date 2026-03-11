@@ -1,0 +1,198 @@
+// 
+
+// import express from "express"
+// import cors from "cors"
+// import 'dotenv/config'
+// import connectDB from "./config/mongodb.js"
+// import connectCloudinary from "./config/cloudinary.js"
+// import userRouter from "./routes/userRoute.js"
+// import productRouter from "./routes/productRoute.js"
+// import cartRouter from "./routes/cartRoute.js"
+// import orderRouter from "./routes/orderRoute.js"
+
+// /* NEW ADMIN ROUTE */
+// import adminRouter from "./routes/adminRoute.js"
+
+// // App config
+// const app = express()
+// const port = process.env.PORT || 4000
+
+// connectDB()
+// connectCloudinary()
+
+// // Middleware
+// app.use(express.json())
+// app.use(cors())
+
+// // Api endpoints
+// app.use('/api/user', userRouter)
+// app.use('/api/product', productRouter)
+// app.use('/api/cart', cartRouter)
+// app.use('/api/order', orderRouter)
+
+// /* NEW ADMIN ENDPOINT */
+// app.use('/api/admin', adminRouter)
+
+// app.get('/', (req,res)=>{
+//     res.send("Api Working")
+// })
+
+// app.listen(port, ()=> console.log('Server is running on PORT : '+ port))
+
+
+
+// import express from "express"
+// import cors from "cors"
+// import 'dotenv/config'
+
+// import connectDB from "./config/mongodb.js"
+// import connectCloudinary from "./config/cloudinary.js"
+
+// import userRouter from "./routes/userRoute.js"
+// import productRouter from "./routes/productRoute.js"
+// import cartRouter from "./routes/cartRoute.js"
+// import orderRouter from "./routes/orderRoute.js"
+
+// /* NEW ADMIN ROUTE */
+// import adminRouter from "./routes/adminRoute.js"
+
+
+// // App config
+// const app = express()
+// const port = process.env.PORT || 4000
+
+
+// // Connect Database
+// connectDB()
+// connectCloudinary()
+
+
+// // Middleware
+// app.use(express.json())
+// app.use(cors())
+
+
+// // Api endpoints
+// app.use('/api/user', userRouter)
+// app.use('/api/product', productRouter)
+// app.use('/api/cart', cartRouter)
+// app.use('/api/order', orderRouter)
+
+// /* NEW ADMIN ENDPOINT */
+// app.use('/api/admin', adminRouter)
+
+
+// // Default route
+// app.get('/', (req,res)=>{
+//     res.send("Api Working")
+// })
+
+
+// // Server start
+// app.listen(port, ()=> console.log('Server is running on PORT : '+ port))
+
+// import express from "express"
+// import cors from "cors"
+// import 'dotenv/config'
+
+// import connectDB from "./config/mongodb.js"
+// import connectCloudinary from "./config/cloudinary.js"
+
+// import userRouter from "./routes/userRoute.js"
+// import productRouter from "./routes/productRoute.js"
+// import cartRouter from "./routes/cartRoute.js"
+// import orderRouter from "./routes/orderRoute.js"
+
+// /* NEW ADMIN ROUTE */
+// import adminRouter from "./routes/adminRoute.js"
+
+
+// // App config
+// const app = express()
+// const port = process.env.PORT || 4000
+
+
+// // Connect Database
+// connectDB()
+// connectCloudinary()
+
+
+// // Middleware
+// app.use(express.json())
+// app.use(cors())
+
+
+// // Api endpoints
+// app.use('/api/user', userRouter)
+// app.use('/api/product', productRouter)
+// app.use('/api/cart', cartRouter)
+// app.use('/api/order', orderRouter)
+
+// /* NEW ADMIN ENDPOINT */
+// app.use('/api/admin', adminRouter)
+
+
+// // Default route
+// app.get('/', (req, res) => {
+//     res.send("Api Working")
+// })
+
+
+// // Server start
+// app.listen(port, () => console.log('Server is running on PORT : ' + port))
+
+import express from "express"
+import cors from "cors"
+import 'dotenv/config'
+
+import connectDB from "./config/mongodb.js"
+import connectCloudinary from "./config/cloudinary.js"
+
+import userRouter from "./routes/userRoute.js"
+import productRouter from "./routes/productRoute.js"
+import cartRouter from "./routes/cartRoute.js"
+import orderRouter from "./routes/orderRoute.js"
+
+/* NEW ADMIN ROUTE */
+import adminRouter from "./routes/adminRoute.js"
+
+/* NEW CONTACT ROUTE */
+import contactRouter from "./routes/contactRoute.js"
+
+
+// App config
+const app = express()
+const port = process.env.PORT || 4000
+
+
+// Connect Database
+connectDB()
+connectCloudinary()
+
+
+// Middleware
+app.use(express.json())
+app.use(cors())
+
+
+// Api endpoints
+app.use('/api/user', userRouter)
+app.use('/api/product', productRouter)
+app.use('/api/cart', cartRouter)
+app.use('/api/order', orderRouter)
+
+/* NEW ADMIN ENDPOINT */
+app.use('/api/admin', adminRouter)
+
+/* NEW CONTACT ENDPOINT */
+app.use('/api/contact', contactRouter)
+
+
+// Default route
+app.get('/', (req, res) => {
+    res.send("Api Working")
+})
+
+
+// Server start
+app.listen(port, () => console.log('Server is running on PORT : ' + port))
